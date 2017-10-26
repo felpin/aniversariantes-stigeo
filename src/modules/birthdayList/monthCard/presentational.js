@@ -8,10 +8,13 @@ const MonthCard = props => (
     containerStyle={styles.container}
     title={props.name}
     titleStyle={styles.title}
-  />
+  >
+    {props.children}
+  </Card>
 );
 
 MonthCard.propTypes = {
+  children: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
 };
 
